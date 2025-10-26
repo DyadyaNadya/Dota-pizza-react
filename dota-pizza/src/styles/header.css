@@ -1,0 +1,15 @@
+header{
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    font-family: 'Trajan';
+}
+
+.header__title{
+    font-size: 3.3rem;
+    margin-left: 20px;
+}
+
+.logo{
+    margin: 0.8rem;
+}

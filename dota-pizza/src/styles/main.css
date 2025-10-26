@@ -1,0 +1,26 @@
+@font-face {
+    font-family: "Dodo";
+    src: url(../styles/fonts/Dodo/DodoRounded_v2-Regular.otf);
+}
+
+@font-face {
+    font-family: "Trajan";
+    src: url(../styles/fonts/Trajan-Bold.ttf);
+}
+
+html{
+    height: 100vh;
+}
+
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --main-color: rgb(255, 139, 61);
+    --text-color: black;
+    --white-color: white;
+
+}
