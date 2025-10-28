@@ -1,10 +1,7 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import "../styles/main.css";
-import "../styles/header.css";
-import Header from "./Header";
-import App from "./App";
+import React from "react"
 
-
-const root = createRoot(document.getElementById('root'))
-root.render(<App />)
+export default function Main(){
+    return(
+        
+    )
+}
