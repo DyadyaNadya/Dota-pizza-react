@@ -3,19 +3,14 @@ import '../styles/menu.css'
 import arrow from '../images/arrow-down.svg'
 
 
+let categories = ['Пиццы', 'Закуски', 'Соусы', 'Салаты', 'Десерты', 'Напитки', 'Игрушки', 'Комбо', 'Акции'] 
+
+
 export default function Navigation(){
     return(
         <nav class="menu">
     <ul>
-        <li><a href="#" id="pizza">Пиццы</a></li>
-        <li><a href="#" id="snack">Закуски</a></li>
-        <li><a href="#">Соусы</a></li>
-        <li><a href="#">Салаты</a></li>
-        <li><a href="#">Десерты</a></li>
-        <li><a href="#">Напитки</a></li>
-        <li><a href="#">Игрушки</a></li>
-        <li><a href="#">Комбо</a></li>
-        <li><a href="#">Акции</a></li>
+        {categories.map((catrgory) => <li><a href="#">{catrgory}</a></li>)}
         <Dropdown/>
 
     </ul>
@@ -35,4 +30,18 @@ function Dropdown(){
                 <li><a href="">Детям</a></li>
             </ul></li>
     )
+}
+
+function Slide(){
+    const [scrollPos, setScrollPos] = useState(false)
+    
+    const {scrollTop, scrollHeight, clientHeight} = event.target
+    const scrollRatio = scrollTop / (scrollHeight - clientHeight);
+
+		if (scrollRatio > 0.5) {
+			setScrollPos(true);
+		} else {
+			setScrollPos(false);
+		}
+
 }
