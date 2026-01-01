@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import pudge from "../images/Pudge.png"
 import leftarrow from "../images/left-chevron.png"
 import rightarrow from "../images/chevron.png"
@@ -11,15 +11,38 @@ export default function Stories(){
 
     function checkScroll(){
         const {scrollLeft, scrollWidth, clientWidth} = containerRef.current
-        canScrollLeft(scrollLeft > 0)
-        canScrollRight(scrollLeft < scrollWidth - clientWidth)
+        setCanScrollLeft(scrollLeft > 0)
+        setCanScrollRight(scrollLeft < scrollWidth - clientWidth)
     }
     
+
+    function scrollLeft(){
+        if (containerRef.current){
+            containerRef.current.scrollBy({
+                left: -300,
+                behavior: 'smooth'
+            })
+            
+        }
+    }
+
+    function scrollRight(){
+        if (containerRef.current){
+            containerRef.current.scrollBy({
+                left: 300,
+                behavior: 'smooth'
+            })
+            
+        }
+    }
+ 
     
     return(
         <>
             <div className="stories-wrapper">
-                <LeftArrow imageSrc={leftarrow} size={70}/>
+                {canScrollLeft && <div onClick={scrollLeft}>
+                    <LeftArrow imageSrc={leftarrow} size={40}/>
+                </div>}
             <div className="stories" ref={containerRef} onScroll={checkScroll}>
                 <Story imageSrc= {pudge}/>
                 <Story imageSrc= {pudge}/>
@@ -35,7 +58,9 @@ export default function Stories(){
                 <Story imageSrc= {pudge}/>
                 <Story imageSrc= {pudge}/>
             </div>
-                <RightArrow imageSrc={rightarrow} size={70}/>
+                {canScrollRight && <div onClick={scrollRight}>
+                    <RightArrow imageSrc={rightarrow} size={40}/>
+                </div>}
             </div>
         </>
     )
@@ -51,12 +76,12 @@ function Story({imageSrc}){
 
 function LeftArrow({imageSrc, size}){
     return(
-        <img src={imageSrc} alt="" height={size} width={size} style={{cursor: 'pointer'}}/>
+        <button className="stories-arrow"><img src={imageSrc} alt="" height={size} width={size} style={{cursor: 'pointer'}}/></button>
     )
 }
 
 function RightArrow({imageSrc, size}){
     return(
-        <img src={imageSrc} alt="" height={size} width={size} style={{cursor: 'pointer'}}/>
+        <button className="stories-arrow"><img src={imageSrc} alt="" height={size} width={size} style={{cursor: 'pointer'}}/></button>
     )
 }

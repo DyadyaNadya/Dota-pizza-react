@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import '../styles/menu.css'
 import arrow from '../images/arrow-down.svg'
 
@@ -7,14 +7,33 @@ let categories = ['Пиццы', 'Закуски', 'Соусы', 'Салаты', 
 
 
 export default function Navigation(){
-    return(
-        <nav class="menu">
-    <ul>
-        {categories.map((catrgory) => <li><a href="#">{catrgory}</a></li>)}
-        <Dropdown/>
+    // const [isFixed, setIsFixed] = useState(false);
+    // const [isBlurred, setIsBlurred] = useState(false);
+    // const [navHeight, setNavHeight] = useState(0);
 
-    </ul>
-</nav>
+    // useEffect(() => {
+    //     const menu = document.querySelector
+    // })
+
+    const [scrollPos, setScrollPos] = useState(0)
+
+    const handleScroll = (e) =>{
+        const {scrollTop, scrollHeight, clientHeight} = e.target;
+        const position = Math.ceil(
+            (scrollTop / (scrollHeight - clientHeight)) * 100
+        )
+        setScrollPos(position)
+    }
+
+
+    return(
+        <nav class="menu" onScroll={handleScroll} >
+            <ul>
+                {categories.map((catrgory) => <li><a href="#">{catrgory}</a></li>)}
+                <Dropdown/>
+
+            </ul>
+        </nav>
     )
 }
 
@@ -32,16 +51,3 @@ function Dropdown(){
     )
 }
 
-function Slide(){
-    const [scrollPos, setScrollPos] = useState(false)
-    
-    const {scrollTop, scrollHeight, clientHeight} = event.target
-    const scrollRatio = scrollTop / (scrollHeight - clientHeight);
-
-		if (scrollRatio > 0.5) {
-			setScrollPos(true);
-		} else {
-			setScrollPos(false);
-		}
-
-}
