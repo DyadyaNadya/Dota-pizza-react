@@ -3,39 +3,28 @@ import "../styles/card.css";
 import '../styles/main.css'
 import '../styles/section.css'
 import pizza from "../images/pizza.png";
+import { pizzas } from "./Pizzas";
+
 
 export default function PizzaSection(){
     return(
         <>
         <span class="category" id="pizzas">Пиццы</span>
         <div class="pizza-catalog_wrapper">
-        <PizzaCard desciption={"Вкуснейшая пицца от маэстро Паджини"} />
-        <PizzaCard desciption={"Вкуснейшая пицца от маэстро Паджини"} />
-        <PizzaCard desciption={"Вкуснейшая пицца от маэстро Паджини"} />
-        <PizzaCard desciption={"Вкуснейшая пицца от маэстро Паджини"} />
-        <PizzaCard desciption={"Вкуснейшая пицца от маэстро Паджини"} />
-        <PizzaCard desciption={"Вкуснейшая пицца от маэстро Паджини"} />
-        <PizzaCard desciption={"Вкуснейшая пицца от маэстро Паджини"} />
-        <PizzaCard desciption={"Вкуснейшая пицца от маэстро Паджини"} />
-        <PizzaCard desciption={"Вкуснейшая пицца от маэстро Паджини"} />
-        <PizzaCard desciption={"Вкуснейшая пицца от маэстро Паджини"} />
-        <PizzaCard desciption={"Вкуснейшая пицца от маэстро Паджини"} />
-        <PizzaCard desciption={"Вкуснейшая пицца от маэстро Паджини"} />
-        <PizzaCard desciption={"Вкуснейшая пицца от маэстро Паджини"} />
-        <PizzaCard desciption={"Вкуснейшая пицца от маэстро Паджини"} />
+            {pizzas.map((pizza) => (<PizzaCard {...pizza}/>) )}
         </div>
         </>
     )
 }
 
 
-function PizzaCard({desciption}){
+function PizzaCard({desciption, name}){
     return(
         <div class="card">
     <div class="img-pizza_wrapper">
         <img src= {pizza} alt="dgsddsdsdsg" />
     </div>
-    <h1>Пицца-соблазницца</h1>
+    <h1>{name}</h1>
     <section class="description">
         {desciption}
     </section></div>
