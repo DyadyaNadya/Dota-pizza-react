@@ -6,13 +6,16 @@ header{
 }
 
 .header__title{
-    font-size: 3.3rem;
-    margin-left: 20px;
+    font-size: 3rem;
     font-family: 'Trajan';
+    margin: 1.5rem 0 1rem 0.5rem;
+    display: flex;
+    align-items: center;
 }
 
 .logo{
-    margin: 0.8rem;
+    margin: 0.5rem;
+
 }
 
 .register_button{
@@ -47,8 +50,8 @@ header{
 
 .dota_button .dota_icon{
     background-image: url(../images/dota-black-Photoroom.png);
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     margin-left: 1.5rem ;
     margin-right: 1.5rem ;
     background-size: cover;

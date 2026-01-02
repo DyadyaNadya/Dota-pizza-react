@@ -8,14 +8,13 @@
     
 }
 
-.menu_fixed{
-    background-color: #bebabaa4;
+.menu.fixed{
+    z-index: 1000;
+    background-color: #fffafaa4;
     backdrop-filter: blur(15px);
     top: 0;
     left: 0;
-    padding: 1.5rem;
     align-items: center;
-    z-index: 1000;
 }
 
 .icon_fixed{
@@ -26,15 +25,20 @@
     /* transform: translateX(-50%); */
 }
 
+.menu:last-child{
+    background-color: #be8d8d;
+}
+
 .menu > ul{
     display: flex;
     flex-direction: row;
     list-style: none;
     justify-content: center;
     gap: 3rem;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-family: 'Dodo';
 }
+
 
 .menu ul li a{
     text-decoration: none;
@@ -65,8 +69,8 @@
 
 .dropdown img{
     margin-top: 7px;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     margin-left: 5px;
 
 }

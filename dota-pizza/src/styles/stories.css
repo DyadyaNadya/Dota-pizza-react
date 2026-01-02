@@ -5,7 +5,7 @@
 }
 
 .stories{
-    height: 20rem;
+    height: 15rem;
     width: auto;
     display: flex;
     margin: 0 0.6rem;
@@ -19,7 +19,7 @@
 
 .story-wrapper{
     height: 95%;
-    min-width: 13rem;
+    min-width: 11rem;
     background-color: #fff;
     overflow: hidden;
     margin: 0.3rem;

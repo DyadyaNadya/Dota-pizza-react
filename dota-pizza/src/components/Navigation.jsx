@@ -7,29 +7,26 @@ let categories = ['Пиццы', 'Закуски', 'Соусы', 'Салаты', 
 
 
 export default function Navigation(){
-    // const [isFixed, setIsFixed] = useState(false);
-    // const [isBlurred, setIsBlurred] = useState(false);
-    // const [navHeight, setNavHeight] = useState(0);
+    const [scrolled, setScrolled] = useState(false);
 
-    // useEffect(() => {
-    //     const menu = document.querySelector
-    // })
+    useEffect(() =>{
+        function handleScroll(){
+            if(window.scrollY > (innerHeight / 2.3)){
+                setScrolled(true)
 
-    const [scrollPos, setScrollPos] = useState(0)
+            } else {
+                setScrolled(false)
+            }
+        }
 
-    const handleScroll = (e) =>{
-        const {scrollTop, scrollHeight, clientHeight} = e.target;
-        const position = Math.ceil(
-            (scrollTop / (scrollHeight - clientHeight)) * 100
-        )
-        setScrollPos(position)
-    }
-
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
 
     return(
-        <nav class="menu" onScroll={handleScroll} >
+        <nav className={`menu ${scrolled ? 'fixed': ''}`}>
             <ul>
-                {categories.map((catrgory) => <li><a href="#">{catrgory}</a></li>)}
+                {categories.map((category) => <li key={category}><a href="#">{category}</a></li>)}
                 <Dropdown/>
 
             </ul>
