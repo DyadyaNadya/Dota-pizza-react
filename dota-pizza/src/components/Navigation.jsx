@@ -37,9 +37,13 @@ export default function Navigation(){
 
 function Dropdown(){
     const [isVisible, setIsVisible] = useState(false);
+
+   function handleVisible(){
+
+   }
     return (
-        <li className="dropdown">Ещё <img src={arrow} alt="" />
-        <ul class = "dropdown-menu">
+        <li className="dropdown" onMouseEnter={handleVisible}>Ещё <img src={arrow} alt="" />
+        <ul className = "dropdown-menu">
                 <li><a href="">Подарки</a></li>
                 <li><a href="">Мерч</a></li>
                 <li><a href="">Хиты</a></li>

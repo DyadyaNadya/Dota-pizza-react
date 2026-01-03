@@ -1,5 +1,6 @@
-import React from "react"
+import React, { useState } from "react"
 import logo from '../images/pizza.png'
+import SignUp from "./Signup.jsx"
 import '../styles/header.css'
 
 
@@ -31,10 +32,21 @@ function DotaCoins(){
 }
 
 function RegisterButton(){
+    const [isWindow, setIsWindow] = useState(false)
+
+    function openWindow(){
+        setIsWindow(true)
+    }
+    function closeWindow(){
+        setIsWindow(false)
+    }
+
+    
     return(
-        <button className="register_button">
+        <button className="register_button" onClick={openWindow}>
             Вход
         </button>
+        
     )
 
 }

@@ -1,0 +1,23 @@
+.sign-window{
+    height: 300px;
+    width: 500px;
+    background-color: var(--white-color);
+    z-index: 1050;
+}
+
+.sign-button{
+    background-color: var(--main-color);
+    border: none;
+    padding: 2rem;
+    font-family: 'Dodo';
+    font-size: 1.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.sign-button.deactivated{
+    cursor: not-allowed;
+    background-color: var(--main-color);
+    opacity: 0.7;
+
+}
