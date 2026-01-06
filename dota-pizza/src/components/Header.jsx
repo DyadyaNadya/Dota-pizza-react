@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import logo from '../images/pizza.png'
 import SignUp from "./Signup.jsx"
 import '../styles/header.css'
+import '../styles/signUp.css'
 
 
 export default function Header() {
@@ -32,20 +33,24 @@ function DotaCoins(){
 }
 
 function RegisterButton(){
-    const [isWindow, setIsWindow] = useState(false)
+    const [showSignWindow, setShowSignWindow] = useState(false)
 
-    function openWindow(){
-        setIsWindow(true)
+    function showWindowHandler(){
+        setShowSignWindow(true)
     }
-    function closeWindow(){
-        setIsWindow(false)
+
+    function closeWindowHandler(){
+        setShowSignWindow(false)
     }
 
     
     return(
-        <button className="register_button" onClick={openWindow}>
-            Вход
-        </button>
+        <>
+            <button className="register_button" onClick={showWindowHandler}>
+                Вход
+            </button>
+            <SignUp isOpen={showSignWindow} onClose={closeWindowHandler}/>
+        </>
         
     )
 

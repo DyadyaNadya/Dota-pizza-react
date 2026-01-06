@@ -8,6 +8,16 @@
     src: url(../styles/fonts/trajanpro_bold.otf);
 }
 
+@keyframes appearence {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    
+}
+
 html{
     height: 100vh;
 }
@@ -19,8 +29,12 @@ body{
 }
 
 :root{
-    --main-color: rgb(255, 139, 61);
+    /* --main-color: rgb(255, 139, 61); */
+    --main-color: rgb(255, 0, 0);
     --text-color: black;
     --white-color: white;
+    --grey-color: rgba(118, 118, 118, 0.178);
+    --main-color-light: rgb(255, 119, 0) ;
 
 }
+

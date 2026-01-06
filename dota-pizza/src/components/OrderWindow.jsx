@@ -1,35 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
-import '../styles/main.css'
-import '../styles/signUp.css'
+import React, { useState } from "react";
 
-
-export default function SignUp({isOpen, onClose}){
-    const [phoneNumber, setPhoneNumber] = useState('');
-    const [isValid, setIsValid] = useState(false);
-
-    function phoneHandler(e){
-        const phone = e.target.value
-        const digitsOnly = phone.replace(/\D/g, '')
-        const limitedDigits = digitsOnly.slice(0,10)
-
-        setPhoneNumber(limitedDigits)
-        setIsValid(limitedDigits.length === 10);
-    }
-
-    function handleSubmit(e){
-        e.preventDefualt()
-        if (isValid){
-            const fullNumber = `+7${phoneNumber}`
-            console.log('Ваш номерок: ', fullNumber)
-        }
-    }
-
+export default function OrderWindow({isOpen, onClose}){
     if (!isOpen){
-        return null
+        return null;
     }
 
     return(
-            <div className="sign-window_overlay" onClick={onClose}>
+        <div className="sign-window_overlay" onClick={onClose}>
                 <div className="sign-window" onClick={(e) => e.stopPropagation()}>
                     <form className="sign-form" method="post" onSubmit={handleSubmit}>
                         <div className="sign-window_header">
@@ -54,6 +31,5 @@ export default function SignUp({isOpen, onClose}){
                     </form>
                 </div>
             </div>
-        
     )
 }

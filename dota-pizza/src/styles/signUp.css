@@ -1,23 +1,129 @@
+.sign-window_overlay{
+    backdrop-filter: blur(10px);
+    z-index: 1049;
+    height: 1000vh;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    background-color: #0000004c;
+}
+
 .sign-window{
-    height: 300px;
+    min-height: 360px;
     width: 500px;
     background-color: var(--white-color);
     z-index: 1050;
+    font-family: 'Dodo';
+    border-radius: 24px;
+    position: fixed;
+    transform: translate(100%, 100%);
+    animation: appearence 0.3s ease;
+}
+
+.sign-window_header{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin-bottom: 1rem;
+}
+
+.sign-window_header h1{
+    margin: 0;
+}
+
+.sign-window_header h3{
+    margin: 0;
+    color: var(--main-color);
+}
+
+.title-wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 0;
+    width: 100%;
+}
+
+.title-wrapper button{
+    border: none;
+    border-radius: 30%;
+    max-height: fit-content;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.title-wrapper button:hover{
+    background-color: var(--grey-color);
+}
+
+.title-wrapper button:active{
+    background-color: grey;
+}
+
+
+.sign-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem;
+
+}
+
+
+.sign-input_wrapper{
+    border-radius: 5px;
+    background-color: var(--grey-color);
+    padding: 1.1rem;
+    width: 90%;
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    gap: 8px;
+    margin-bottom: 1rem ;
+}
+
+.sign-input{
+    width: 100%;
+    font: inherit;
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    caret-color: var(--main-color);
+}
+
+.description{
+    font-size: 0.8rem;
+    text-align: center;
 }
 
 .sign-button{
     background-color: var(--main-color);
     border: none;
-    padding: 2rem;
+    padding: 1rem;
     font-family: 'Dodo';
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--text-color);
     cursor: pointer;
+    border-radius: 20px;
+    width: 90%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sign-button:hover{
+    background-color: var(--main-color-light);
+    color: var(--white-color);
 }
 
 .sign-button.deactivated{
     cursor: not-allowed;
     background-color: var(--main-color);
-    opacity: 0.7;
+    opacity: 0.4;
+    color: var(--white-color);
 
 }

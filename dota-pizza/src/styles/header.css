@@ -11,6 +11,7 @@ header{
     margin: 1.5rem 0 1rem 0.5rem;
     display: flex;
     align-items: center;
+    color: var(--text-color);
 }
 
 .logo{
@@ -24,7 +25,7 @@ header{
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
-    background-color: rgb(255, 139, 61);
+    background-color: var(--main-color);
     margin-right: 1.5rem;
     font-family: 'Dodo';
     
@@ -36,7 +37,7 @@ header{
 }
 
 .dota_button{
-    background-color: rgb(255, 139, 61);
+    background-color: var(--main-color);
     border: none;
     cursor: pointer;
     margin-left: auto;

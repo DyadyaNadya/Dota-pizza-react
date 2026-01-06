@@ -48,7 +48,7 @@
 }
 
 .menu ul li a:hover{
-    color: rgb(255, 139, 61);
+    color: var(--main-color);
     transition: 0.2s;
 }
 
@@ -82,7 +82,7 @@
     position: absolute;
     list-style: none;
     flex-direction: column;
-    background-color: rgb(255, 139, 61);
+    background-color: var(--main-color);
     top: 100%;
     left: 0;
     padding: 0.5rem 1rem;
