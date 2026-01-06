@@ -8,6 +8,11 @@
     src: url(../styles/fonts/trajanpro_bold.otf);
 }
 
+@font-face {
+    font-family: "Radiance";
+    src: url(../styles/fonts/radiance-regular.otf);
+}
+
 @keyframes appearence {
     from{
         opacity: 0;

@@ -1,8 +1,11 @@
 .sign-window_overlay{
     backdrop-filter: blur(10px);
     z-index: 1049;
-    height: 1000vh;
+    height: 100vh; /* 100vh вместо 1000vh */
     width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
     position: fixed;
     display: flex;
     align-items: center;
@@ -17,7 +20,9 @@
     font-family: 'Dodo';
     border-radius: 24px;
     position: fixed;
-    transform: translate(100%, 100%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     animation: appearence 0.3s ease;
 }
 

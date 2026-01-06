@@ -27,7 +27,7 @@ header{
     cursor: pointer;
     background-color: var(--main-color);
     margin-right: 1.5rem;
-    font-family: 'Dodo';
+    font-family: 'Radiance';
     
 }
 
@@ -46,7 +46,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Dodo';
+    font-family: 'Radiance';
 }
 
 .dota_button .dota_icon{
