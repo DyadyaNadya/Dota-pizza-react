@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import '../styles/main.css'
 import '../styles/signUp.css'
+import '../styles/modal.css'
+
 
 
 export default function SignUp({isOpen, onClose}){
@@ -29,10 +31,10 @@ export default function SignUp({isOpen, onClose}){
     }
 
     return(
-            <div className="sign-window_overlay" onClick={onClose}>
+            <div className="modal-window_overlay" onClick={onClose}>
                 <div className="sign-window" onClick={(e) => e.stopPropagation()}>
                     <form className="sign-form" method="post" onSubmit={handleSubmit}>
-                        <div className="sign-window_header">
+                        <div className="modal-window_header">
                             <div className="title-wrapper">
                                 <h1>Вход</h1>
                                 <button onClick={onClose}>X</button>

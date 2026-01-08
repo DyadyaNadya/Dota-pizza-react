@@ -1,0 +1,55 @@
+.modal-window_overlay{
+    /* backdrop-filter: blur(10px); */
+    z-index: 1049;
+    height: 100vh; /* 100vh вместо 1000vh */
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    background-color: #000000b9;
+    animation: appearance 0.3s ease;
+}
+
+.modal-window_header{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin-bottom: 1rem;
+}
+
+.modal-window_header h1{
+    margin: 0;
+}
+
+.modal-window_header h3{
+    margin: 0;
+    color: var(--main-color);
+}
+
+.title-wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 0;
+    width: 100%;
+}
+
+.title-wrapper button{
+    border: none;
+    border-radius: 30%;
+    max-height: fit-content;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.title-wrapper button:hover{
+    background-color: var(--grey-color);
+}
+
+.title-wrapper button:active{
+    background-color: grey;
+}

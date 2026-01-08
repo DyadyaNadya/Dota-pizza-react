@@ -1,34 +1,28 @@
 import React, { useState } from "react";
+import '../styles/modal.css'
+import '../styles/SignUp.css'
+import pizzapic from "../images/pizza.png";
 
-export default function OrderWindow({isOpen, onClose}){
+
+export default function OrderWindow({isOpen, onClose, pizzaName}){
     if (!isOpen){
         return null;
     }
 
     return(
-        <div className="sign-window_overlay" onClick={onClose}>
-                <div className="sign-window" onClick={(e) => e.stopPropagation()}>
-                    <form className="sign-form" method="post" onSubmit={handleSubmit}>
-                        <div className="sign-window_header">
-                            <div className="title-wrapper">
-                                <h1>Вход</h1>
-                                <button onClick={onClose}>X</button>
-                            </div>
-                            <h3>по номеру телефона</h3>
+        <div className="modal-window_overlay" onClick={onClose}>
+                <div className="order-window" onClick={(e) => e.stopPropagation()}>
+                    <div className="img-wrapper">
+                        <img src={pizzapic} alt="asdasd" />
+                    </div>
+                    <div className="list">
+                        <div className="order-title-wrapper">
+                            <h1>{pizzaName}</h1> 
                         </div>
-                        <div className="sign-input_wrapper">
-                            +7<input type="phone"
-                                     className="sign-input"
-                                     id="input"
-                                     placeholder="Допускаются только номера РФ"
-                                     maxLength={10}
-                                     value={phoneNumber}
-                                     onChange={phoneHandler}
-                                     /></div>
-                         <button className={`sign-button ${!isValid ? 'deactivated' : ''}`}
-                                 disabled = {!isValid}>Отправить код</button>
-                        <span className="description">Нажимая на кнопку, вы соглашаетесь с политикой конфиденциальности и бла-бла-бла эту хрень никто не читает</span>
-                    </form>
+                        <div className="confirm-section">
+                            <button className={`sign-button deactivated`}>Добавить в корзину</button>
+                        </div>
+                    </div>
                 </div>
             </div>
     )

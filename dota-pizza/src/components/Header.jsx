@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import logo from '../images/pizza.png'
-import SignUp from "./Signup.jsx"
+import SignUp from "./SignUp.jsx"
 import '../styles/header.css'
 import '../styles/signUp.css'
 
