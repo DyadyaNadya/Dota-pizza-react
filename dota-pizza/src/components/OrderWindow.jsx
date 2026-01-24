@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import '../styles/modal.css'
 import '../styles/SignUp.css'
+import { ingredients } from "./Ingredients.jsx";
 import pizzapic from "../images/pizza.png";
+
 
 
 export default function OrderWindow({isOpen, onClose, pizzaName}){
@@ -19,11 +21,25 @@ export default function OrderWindow({isOpen, onClose, pizzaName}){
                         <div className="order-title-wrapper">
                             <h1>{pizzaName}</h1> 
                         </div>
+                        <div className="add-ingredients">
+                            <h2 className="ingr-title">Добавьте вкуса своей пицце</h2>
+                            {ingredients.map((ingr, index) => <IngredientCard key={index} {...ingr}/>)}
+                        </div>
                         <div className="confirm-section">
                             <button className={`sign-button deactivated`}>Добавить в корзину</button>
                         </div>
                     </div>
                 </div>
             </div>
+    )
+}
+
+
+function IngredientCard({name, image}){
+    return(
+        <button className="ingr-card">
+            <img src={image} alt={name} />
+            <span className="ingr-name">{name}</span>
+        </button>
     )
 }
