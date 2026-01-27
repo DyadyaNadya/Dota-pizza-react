@@ -60,7 +60,7 @@
     overflow-x: hidden;
     margin: 1rem 0 1.5rem 0.3rem;
     padding-left: 1.5rem;
-
+    
 }
 
 .confirm-section{
@@ -89,11 +89,16 @@
     box-shadow: rgba(0, 0, 0, 0.089) 0px 1px 15px;
     transition: 0.3s ease;
     border: none;
+    font-family: 'Dodo';
+}
+
+.ingr-card.selected{
+    border: 1px solid var(--main-color);
+    
 }
 
 .ingr-card:hover{
     cursor: pointer;
-    transform: scale(1.01);
     box-shadow: rgba(0, 0, 0, 0.158) 0px 4px 20px;
 
 }

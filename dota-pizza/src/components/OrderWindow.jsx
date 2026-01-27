@@ -36,9 +36,18 @@ export default function OrderWindow({isOpen, onClose, pizzaName}){
 
 
 function IngredientCard({name, image}){
+
+    const [isSelected, setIsSelected] = useState(false);
+
+    function hanldeSelect(){
+        setIsSelected(prev => !prev)
+    }
+
+    const imgSrc = image || pizzapic
+
     return(
-        <button className="ingr-card">
-            <img src={image} alt={name} />
+        <button className={`ingr-card ${isSelected ? 'selected' : ''}`} onClick={hanldeSelect}>
+            <img src={imgSrc} alt={name} />
             <span className="ingr-name">{name}</span>
         </button>
     )
