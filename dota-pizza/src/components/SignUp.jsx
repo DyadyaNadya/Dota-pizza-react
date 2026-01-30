@@ -52,7 +52,7 @@ export default function SignUp({isOpen, onClose}){
                                      /></div>
                          <button className={`sign-button ${!isValid ? 'deactivated' : ''}`}
                                  disabled = {!isValid}>Отправить код</button>
-                        <span className="description">Нажимая на кнопку, вы соглашаетесь с политикой конфиденциальности и бла-бла-бла эту хрень никто не читает</span>
+                        <span className="description">Нажимая на кнопку, вы соглашаетесь с политикой конфиденциальности и бла-бла-бла это никто не читает</span>
                     </form>
                 </div>
             </div>
