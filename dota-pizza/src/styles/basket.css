@@ -1,0 +1,25 @@
+/* .basket-section{
+    height: 100%;
+    width: 30%;
+    background-color: #fff;
+    display: block;
+} */
+
+
+.basket-section {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 320px;
+  background: white;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.basketSection.open {
+  transform: translateX(0);
+}

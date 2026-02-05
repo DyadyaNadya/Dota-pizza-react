@@ -51,7 +51,7 @@ export default function SignUp({isOpen, onClose}){
                                      onChange={phoneHandler}
                                      /></div>
                          <button className={`sign-button ${!isValid ? 'deactivated' : ''}`}
-                                 disabled = {!isValid}>Отправить код</button>
+                                 disabled = {!isValid}><div className="dota-text">Отправить код</div></button>
                         <span className="description">Нажимая на кнопку, вы соглашаетесь с политикой конфиденциальности и бла-бла-бла это никто не читает</span>
                     </form>
                 </div>

@@ -51,7 +51,8 @@
 }
 
 .sign-button{
-    background-color: var(--main-color);
+    /* background-color: var(--main-color); */
+    background: linear-gradient(to bottom, #AC2E16 0%, #8D3020 100%);
     border: none;
     padding: 1rem;
     font-family: 'Dodo';

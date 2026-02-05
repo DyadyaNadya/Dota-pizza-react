@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    /* line-height: 2.8rem; */
     
 }
 
@@ -40,6 +41,13 @@
     font-family: 'Dodo';
 }
 
+.nav-menu-category{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .menu ul li a{
     text-decoration: none;
@@ -55,6 +63,7 @@
 .dropdown{
     position: relative;
     display: flex;
+    flex-direction: row;
     align-items: center;
     transition: 0.3s;
     
@@ -82,7 +91,9 @@
     position: absolute;
     list-style: none;
     flex-direction: column;
-    background-color: var(--main-color);
+    line-height: 2rem;
+    /* background-color: var(--main-color); */
+    background: linear-gradient(to bottom, #AC2E16 0%, #8D3020 100%);
     top: 100%;
     left: 0;
     padding: 0.5rem 1rem;
@@ -106,4 +117,22 @@
     opacity: 1;
     transition: 0.3s;
 
+}
+
+.basket-button{
+    border: none;
+    font-size: 1.5rem;
+    border-radius: 25px;
+    padding: 0.7rem;
+    font-family: 'Radiance';
+    margin: 0 1.5rem;
+    /* background-color: var(--main-color); */
+    background: linear-gradient(to bottom, #AC2E16 0%, #8D3020 100%);
+    transition: 0.3s;
+    line-height: 1.5rem;
+}
+
+.basket-button:hover{
+    color: var(--white-color) ;
+    cursor: pointer;
 }

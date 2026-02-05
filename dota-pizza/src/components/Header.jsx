@@ -9,7 +9,7 @@ export default function Header() {
     return (
         <header>
             <Logo size={100} />
-            <h1 className="header__title">DotaPizza</h1>
+            <h1 className="header__title dota-text">DotaPizza</h1>
             <DotaCoins/>
             <RegisterButton/>
         </header>
@@ -27,7 +27,7 @@ function DotaCoins(){
     return(
         <button className="dota_button">
         <div className="dota_icon"></div>
-        <span>Дотакоины</span>
+        <span className="dota-text">Дотакоины</span>
         </button>
     )
 }
@@ -43,15 +43,16 @@ function RegisterButton(){
         setShowSignWindow(false)
     }
 
-    
     return(
         <>
             <button className="register_button" onClick={showWindowHandler}>
-                Вход
+                <div className="register-text dota-text">Вход</div>
             </button>
             <SignUp isOpen={showSignWindow} onClose={closeWindowHandler}/>
         </>
         
     )
-
+    
 }
+
+

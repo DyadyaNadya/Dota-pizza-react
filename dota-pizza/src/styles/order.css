@@ -73,6 +73,7 @@
 
 .confirm-section button{
     width: 100%;
+    background: linear-gradient(to bottom, #AC2E16 0%, #8D3020 100%);
 }
 
 .ingr-title{

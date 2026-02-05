@@ -5,7 +5,7 @@ import '../styles/main.css'
 
 export default function Main(){
     return(
-        <main>
+        <main className="main-body">
             <PizzaSection/>
         </main>
     )

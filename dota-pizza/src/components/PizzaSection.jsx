@@ -38,9 +38,9 @@ function PizzaCard({desciption, name }){
         <div className="img-pizza_wrapper">
             <img src= {pizzapic} alt="dgsddsdsdsg" />
         </div>
-        <h1>{name}</h1>
         <section className="description">
-            {desciption}
+        <h1>{name}</h1>
+            <div className="sub-description">{desciption}</div>
         </section></div>
         <OrderWindow isOpen={showOrderWindow} onClose={windowClose} pizzaName={name}/>
         </>

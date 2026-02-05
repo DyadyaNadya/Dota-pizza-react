@@ -26,7 +26,7 @@ export default function OrderWindow({isOpen, onClose, pizzaName}){
                             {ingredients.map((ingr, index) => <IngredientCard key={index} {...ingr}/>)}
                         </div>
                         <div className="confirm-section">
-                            <button className={`sign-button deactivated`}>Добавить в корзину</button>
+                            <button className={`sign-button deactivated`}><div className="dota-text">Добавить в корзину</div></button>
                         </div>
                     </div>
                 </div>
